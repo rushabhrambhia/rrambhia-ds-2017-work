@@ -3,7 +3,7 @@ This is a test repo
 
 
 ## This is a test repo
-*I am learning how to use **markdown**
+_I am learning how to use **markdown**_
 
 Here are list of things to learn
 * Create a Git report
