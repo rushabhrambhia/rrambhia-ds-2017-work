@@ -11,5 +11,5 @@ Here are list of things to learn
 * Add test content to _**README.me**_ file
 * Finally **commit** to Git
 
-_Let's add code snipped_
-'''print "Hello World!'''
+_Let's add code snippet_
+```print "Hello World!```
