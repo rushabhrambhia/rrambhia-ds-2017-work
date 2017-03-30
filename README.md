@@ -10,3 +10,6 @@ Here are list of things to learn
 * Create a README.md file
 * Add test content to _**README.me**_ file
 * Finally **commit** to Git
+
+_Let's add code snipped_
+'''print "Hello World!'''
