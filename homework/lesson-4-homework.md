@@ -83,7 +83,23 @@ Output
 Which burrito is more popular, steak or chicken?
 
 **Solution**
-???????
+Chicken Burrito is more popular. I used combination of text processing commands as follows:
+
+Command
+```
+cut -f3 chipotle.tsv | sort | grep "Burrito" | uniq -c | sort
+```
+
+Output
+
+```
+      6 Burrito
+     59 Carnitas Burrito
+     91 Barbacoa Burrito
+     95 Veggie Burrito
+    368 Steak Burrito
+    553 Chicken Burrito
+```
 
 ---------
 
@@ -91,5 +107,20 @@ Which burrito is more popular, steak or chicken?
 Do chicken burritos more often have black beans or pinto beans?
 
 **Solution**
+Chicken burritos have **black beans** more often than pinto beans. I used cut and grep commands to count lines with patterns that matched "Chicken Burrito" and then looked for lines that matched "Black Beans" and "Pinto Beans" with the below results:
+
+Command for Pinto Beans
+
+```
+cut -f3,4 chipotle.tsv | grep "Chicken Burrito" | grep "Pinto Beans" | wc -l 
+105
+```
+
+Command for Black Beans
+
+```
+cut -f3,4 chipotle.tsv | grep "Chicken Burrito" | grep "Black Beans" | wc -l 
+282
+```
 
 
