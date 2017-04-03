@@ -1,8 +1,22 @@
 # Lesson 4 Homework - Chipotle.tsv 
 
 **Question 1:**
+Look at the head and the tail of chipotle.tsv in the data subdirectory of this repo. Think for a minute about how the data is structured. What do you think each column means? What do you think each row means? Tell me! (If you're unsure, look at more of the file contents.)
 
-_Method: I used ```head``` and ```tail``` commands to preview the file. Below are the commands and their respective outputs_
+**Solution**
+
+_I used ```head``` and ```tail``` commands to preview the file. Below are the commands and their respective outputs._
+
+_Each column represents a information regarding an order_
+_Each row represents a different or unique item being ordered along with its quantity, ingredient choices and price_
+
+|Column Name|Description|
+|---|---|
+order_id|Id of an order
+quantity|Quantity of item being ordered
+item name|Name of the item
+choice_description|Choices made by customer for that item
+item_price|Price of that item
 
 Head command:```head chipotle.tsv ```
 
@@ -35,3 +49,47 @@ Output
 1834	1	Chicken Salad Bowl	[Fresh Tomato Salsa, [Fajita Vegetables, Pinto Beans, Guacamole, Lettuce]]	$11.25 
 1834	1	Chicken Salad Bowl	[Fresh Tomato Salsa, [Fajita Vegetables, Lettuce]]	$8.75 
 1834	1	Chicken Salad Bowl	[Fresh Tomato Salsa, [Fajita Vegetables, Pinto Beans, Lettuce]]	$8.75 
+```
+---------
+
+**Question 2:**
+How many orders do there appear to be?
+
+**Solution**
+
+1834
+
+---------
+
+**Question 3:**
+How many lines are in this file?
+
+**Solution**
+
+4623 lines. I used the word count command as follows
+
+```
+$ wc -l chipotle.tsv
+```
+
+Output
+```
+4623 chipotle.tsv
+```
+
+---------
+
+**Question 4:**
+Which burrito is more popular, steak or chicken?
+
+**Solution**
+???????
+
+---------
+
+**Question 5:**
+Do chicken burritos more often have black beans or pinto beans?
+
+**Solution**
+
+
