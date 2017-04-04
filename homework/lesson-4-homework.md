@@ -123,4 +123,55 @@ cut -f3,4 chipotle.tsv | grep "Chicken Burrito" | grep "Black Beans" | wc -l
 282
 ```
 
+---------
 
+**Question 6:**
+Make a list of all of the CSV or TSV files in the [our class repo] (https://github.com/ga-students/DS-SEA-3). repo (using a single command).
+
+**Solution**
+
+Command with Output
+
+```
+$ find ./DS-SEA-06/ -name *.?sv
+./DS-SEA-06/data/airlines.csv
+./DS-SEA-06/data/Airline_on_time_west_coast.csv
+./DS-SEA-06/data/bank-additional.csv
+./DS-SEA-06/data/bikeshare.csv
+./DS-SEA-06/data/chipotle.tsv
+./DS-SEA-06/data/citibike_feb2014.csv
+./DS-SEA-06/data/drinks.csv
+./DS-SEA-06/data/drones.csv
+./DS-SEA-06/data/hitters.csv
+./DS-SEA-06/data/icecream.csv
+./DS-SEA-06/data/imdb_1000.csv
+./DS-SEA-06/data/mtcars.csv
+./DS-SEA-06/data/NBA_players_2015.csv
+./DS-SEA-06/data/ozone.csv
+./DS-SEA-06/data/pronto_cycle_share/2015_station_data.csv
+./DS-SEA-06/data/pronto_cycle_share/2015_trip_data.csv
+./DS-SEA-06/data/pronto_cycle_share/2015_weather_data.csv
+./DS-SEA-06/data/rossmann.csv
+./DS-SEA-06/data/rt_critics.csv
+./DS-SEA-06/data/sms.tsv
+./DS-SEA-06/data/stores.csv
+./DS-SEA-06/data/syria.csv
+./DS-SEA-06/data/time_series_train.csv
+./DS-SEA-06/data/titanic.csv
+./DS-SEA-06/data/ufo.csv
+./DS-SEA-06/data/vehicles_test.csv
+./DS-SEA-06/data/vehicles_train.csv
+./DS-SEA-06/data/yelp.csv
+```
+
+**Question 7:**
+Count the approximate number of occurrences of the word "dictionary" (regardless of case) across all files of [our class repo] (https://github.com/ga-students/DS-SEA-3).
+
+**Solution**
+
+Command with Output
+
+```
+$ grep -ri dictionary DS-SEA-06/ | wc -l
+80
+```
