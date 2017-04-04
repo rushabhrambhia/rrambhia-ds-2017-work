@@ -69,7 +69,7 @@ How many lines are in this file?
 4623 lines. I used the word count command as follows
 
 ```
-$ wc -l chipotle.tsv
+wc -l chipotle.tsv
 ```
 
 Output
@@ -133,7 +133,7 @@ Make a list of all of the CSV or TSV files in the [our class repo] (https://gith
 Command with Output
 
 ```
-$ find ./DS-SEA-06/ -name *.?sv
+find ./DS-SEA-06/ -name *.?sv
 ./DS-SEA-06/data/airlines.csv
 ./DS-SEA-06/data/Airline_on_time_west_coast.csv
 ./DS-SEA-06/data/bank-additional.csv
@@ -172,6 +172,6 @@ Count the approximate number of occurrences of the word "dictionary" (regardless
 Command with Output
 
 ```
-$ grep -ri dictionary DS-SEA-06/ | wc -l
+grep -ri dictionary DS-SEA-06/ | wc -l
 80
 ```
