@@ -164,6 +164,8 @@ find ./DS-SEA-06/ -name *.?sv
 ./DS-SEA-06/data/yelp.csv
 ```
 
+---------
+
 **Question 7:**
 Count the approximate number of occurrences of the word "dictionary" (regardless of case) across all files of [our class repo] (https://github.com/ga-students/DS-SEA-3).
 
