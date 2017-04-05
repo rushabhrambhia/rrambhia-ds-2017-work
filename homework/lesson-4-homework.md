@@ -130,10 +130,15 @@ Make a list of all of the CSV or TSV files in the [our class repo] (https://gith
 
 **Solution**
 
-Command with Output
+Command 
 
 ```
 find ./DS-SEA-06/ -name *.?sv
+```
+
+Output
+
+```
 ./DS-SEA-06/data/airlines.csv
 ./DS-SEA-06/data/Airline_on_time_west_coast.csv
 ./DS-SEA-06/data/bank-additional.csv
@@ -169,7 +174,7 @@ find ./DS-SEA-06/ -name *.?sv
 **Question 7:**
 Count the approximate number of occurrences of the word "dictionary" (regardless of case) across all files of [our class repo] (https://github.com/ga-students/DS-SEA-3).
 
-**Solution**
+**Solution** 80
 
 Command with Output
 
