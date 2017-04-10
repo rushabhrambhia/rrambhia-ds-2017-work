@@ -1,7 +1,7 @@
 # PROJECT QUESTION #
 
 **What is the question you hope to answer?**
-Do seniors who eat more fruit on a daily basis have lesser chances of having a heart disease?
+Do seniors who eat more fruit on a daily basis have lesser chances of having heart disease?
 
 **What data are you planning to use to answer that question?**
 I am planning to use [2015 BRFSS](https://www.cdc.gov/brfss/annual_data/annual_2015.html) survey data. 
