@@ -13,13 +13,14 @@ import matplotlib.pyplot as plt
 # I would advise not to read the entire file. 
 # It took me 3 mins to read the whole file into a dataframe
 
-df = pd.read_sas("../data/LLCP2015.XPT")
+df = pd.read_sas("C:/Users/rrambhia/Git/non-git/data for ds project/LLCP2015.XPT")
 df.shape
 df.head()
 df.columns.values.tolist()
 
 # create a subset of data frame with limited number of columns needed for project
-df_a = df[["_MICHD","_AGEG5YR","_BMI5","_EDUCAG","_INCOMG","_SMOKER3","FRUTDA1_","FTJUDA1_","MARITAL","SEX",]]
+features = ["_MICHD","SEX","MARITAL","EDUCA","_RFBMI5","_RACE_G1","DIABETE3","_RFCHOL","INCOME2","EXERANY2","SMOKDAY2","FRUIT1","FRUITJU1","_AGEG5YR"]
+df_a = df[features]
 df_a.head()
 df_a.describe()
 # exlude all rows with "no response" i.e Blank value in _MICHD

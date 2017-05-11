@@ -22,6 +22,48 @@ print(df.columns)
 
 df.describe()
 
-sns.heatmap(df.corr())
+df['HD'] = np.where(df['_MICHD']==1, 1, 0)
 
-df.boxplot(column="_AGEG5YR")
+
+def fruit2daily_fruit(row):
+    if row['FRUIT1'] >= 100 and row['FRUIT1'] < 200:
+        val = row['FRUIT1']-100
+    elif row['FRUIT1'] >= 200 and row['FRUIT1'] < 300:
+        val = (row['FRUIT1']-200)/7
+    elif row['FRUIT1'] == 300:
+        val = 0.02
+    elif row['FRUIT1'] > 300 and row['FRUIT1']<400:
+        val = (row['FRUIT1'] - 300)/30
+    elif row['FRUIT1'] == 555:
+        val = 0
+    else: 
+        val = float('NaN')
+    return val
+
+def fruit_juice2daily_fruit(row):
+    if row['FRUITJU1'] >= 100 and row['FRUITJU1'] < 200:
+        val = row['FRUITJU1']-100
+    elif row['FRUITJU1'] >= 200 and row['FRUITJU1'] < 300:
+        val = (row['FRUITJU1']-200)/7
+    elif row['FRUITJU1'] == 300:
+        val = 0.02
+    elif row['FRUITJU1'] > 300 and row['FRUITJU1']<400:
+        val = (row['FRUITJU1'] - 300)/30
+    elif row['FRUITJU1'] == 555:
+        val = 0
+    else: 
+        val = float('NaN')
+    return val
+
+df['dailyFruit'] = df.apply(fruit2daily_fruit,axis = 1) + df.apply(fruit_juice2daily_fruit,axis = 1)
+
+df.dailyFruit.describe()
+
+df.isnull().sum()
+
+df.to_csv("../data/brfss-data-subset_cleaned.csv",index=False)
+
+
+
+
+
