@@ -15,7 +15,7 @@ from sklearn.tree import DecisionTreeRegressor
 treereg = DecisionTreeRegressor(random_state=1)
 
 # Technique 1: Remove NaNs from dailyFruit
-df = pd.read_csv("../data/dailyFruit_drop_na.csv")
+df = pd.read_csv("../data/dailyFruitVeggie_drop_NaN_with_dummies.csv")
 
 # List of features
 feature_cols = ["dailyFruit"]

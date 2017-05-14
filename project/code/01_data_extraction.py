@@ -19,16 +19,16 @@ df.head()
 df.columns.values.tolist()
 
 # create a subset of data frame with limited number of columns needed for project
-features = ["_STATE","_MICHD","SEX","MARITAL","EDUCA","_RFBMI5","_RACE_G1","DIABETE3","_RFCHOL","INCOME2","EXERANY2","SMOKDAY2","FRUIT1","FRUITJU1","_AGEG5YR","FVGREEN"]
+features = ["_MICHD","SEX","MARITAL","_RFBMI5","DIABETE3","_RFCHOL","EXERANY2","FRUIT1","_AGEG5YR","FVGREEN"]
 df_a = df[features]
 df_a.head()
 df_a.describe()
 
 df._STATE.value_counts()
 # exlude all rows with "no response" i.e Blank value in _MICHD
-df_a = df_a[df_a._MICHD >= 1]
+
 
 df_a.shape
 
 # export df_a to a CSV for project purpose
-df_a.to_csv("../data/subset-fruit-veggies.csv",index=False)
+df_a.to_csv("../data/extracted_subset.csv",index=False)

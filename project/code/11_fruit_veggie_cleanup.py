@@ -10,18 +10,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df = pd.read_csv("../data/subset-fruit-veggies.csv")
-
-
-
-df = df[(df._AGEG5YR >= 10) & (df._AGEG5YR < 14)]
+df = pd.read_csv("../data/extracted_subset.csv")
 
 df.shape
 
 print(df.columns)
 
+
 df.describe()
 
+#Define 
+df = df[df._MICHD >= 1]
 df['HD'] = np.where(df['_MICHD']==1, 1, 0)
 
 
@@ -53,6 +52,27 @@ def fvgreen2daily_veggie(row):
         val = 0
     else: 
         val = float('NaN')
+    return val
+
+def fruit2dfruit(row):
+    if row['FRUIT1'] >= 100 and row['FRUIT1'] < 200:
+        val = 1
+    else: 
+        val = 0
+    return val
+
+def fruit2wfruit(row):
+    if row['FRUIT1'] >= 200 and row['FRUIT1'] < 300:
+        val = 1
+    else: 
+        val = 0
+    return val
+
+def fruit2mfruit(row):
+    if row['FRUIT1'] >= 300 and row['FRUIT1'] < 400:
+        val = 1
+    else: 
+        val = 0
     return val
 
 df['dailyFruit'] = df.apply(fruit2daily_fruit,axis = 1) 

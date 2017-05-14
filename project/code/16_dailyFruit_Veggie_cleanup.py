@@ -14,13 +14,16 @@ df = pd.read_csv("../data/calculated_dailyFruit_Veggie.csv")
 
 df.shape
 
+df.boxplot(column="dailyFruit", by="HD")
+df.boxplot(column="dailyVeggie", by="HD")
 
+df.dailyFruit.describe()
 
 # Technique 1: Drop dailyFruit and dailyVeggie NaN
 df_a = df[df.dailyFruit >= 0]
 df_a = df_a[df_a.dailyVeggie >= 0]
-df_a = df_a[df_a.dailyFruit < 2.5]
-df_a = df_a[df_a.dailyVeggie < 2]
+df_a = df_a[df_a.dailyFruit <= 3]
+df_a = df_a[df_a.dailyVeggie <= 3]
 
 df_a.boxplot(column="dailyFruit", by="HD")
 df_a.boxplot(column="dailyVeggie", by="HD")
